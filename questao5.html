@@ -8,7 +8,14 @@
 </head>
 <body>
     <script>
-        
+        function idade(nasc, atual){
+            return atual - nasc;
+        }
+
+        const nas = prompt("Nascimento: ");
+        const at = prompt('Atual: ');
+
+        alert(idade(nas, at));
     </script>
 </body>
 </html>
