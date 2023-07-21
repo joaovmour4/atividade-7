@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+<body>
+    <script>
+        function printar(obj, indice){
+            return `${indice+1}. ${obj.nome} - ${obj.idade} anos`;
+        }
+        const pessoas = new Array;
+        do{
+            const name = prompt("Digite um nome: ");
+            if(name === 'Fim')
+                break;
+            const idade = Number(prompt("Digite a idade: "));
+            const pessoa = {
+                nome: name,
+                idade: idade
+            }
+            pessoas.push(pessoa);
+        }while(name != 'Fim');
+
+        const filaPreferencial = pessoas.filter(pessoa => pessoa.idade > 59);
+        const filaNormal = pessoas.filter(pessoa => pessoa.idade <= 59);
+
+        console.log(filaNormal[0].nome);
+        console.log(filaNormal);
+        console.log(pessoas);
+
+    </script>
+</body>
+</html>

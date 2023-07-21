@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<body>
+    <script>
+        const temp = new Array;
+        for(let i=0; i<7; i++){
+            temp[i] = prompt(`Digite a temperatura do dia ${i+1}`);
+        }
+
+        const maior = temp.reduce(function(maior, value){
+            if(value > maior){
+                maior = value;
+            }
+            return maior;
+        });
+
+        const menor = temp.reduce(function(menor, value){
+            if(value < menor){
+                menor = value;
+            }
+            return menor;
+        });
+
+        alert(`Maior: ${maior}, Menor: ${menor}`);
+
+    </script>
+</body>
+</html>
